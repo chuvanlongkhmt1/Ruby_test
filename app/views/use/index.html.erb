@@ -1,0 +1,6 @@
+<h1>Use</h1>
+<ul>
+  <% @use.each do |use| %>
+    <li><%= link_to use.name, use_path(use)  %></li>
+  <% end %>
+</ul>
