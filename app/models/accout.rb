@@ -1,0 +1,2 @@
+class Accout < ApplicationRecord
+end

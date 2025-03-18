@@ -63,3 +63,4 @@ group :test do
 end
 gem 'rack-cors'
 gem 'responders'
+gem 'bcrypt', '~> 3.1.11'
