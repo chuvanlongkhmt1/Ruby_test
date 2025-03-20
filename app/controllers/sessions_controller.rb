@@ -1,12 +1,15 @@
 class SessionsController < ApplicationController
-
   def signin
     user = User.find_by(email: params[:email])
   if user && user.authenticate(params[:password])
     session[:current_user_id] = user.id
-      render json: {user:user}
+      render json: {
+        logged_in:true,
+        user:current_user}
     else
-      render json:{errors:"invalid email"}
+      render json:{logged_in:false,
+      user:current_user,
+      errors:"invalid email"}
     end
   end
 
