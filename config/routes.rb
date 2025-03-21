@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get "groupuser/update"
   get "groupuser/destroy"
   post '/signin', to: 'sessions#signin'
+  post '/create', to: 'register#create'
   resources :users
   resources :groupuser
   
